@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<script>
+if(localStorage.getItem("cardVerified") !== "true"){
+    window.location.href = "card-verification.html";
+}
+</script>
+
+<header>
+    <h2> 😇 Our Products</h2>
+    <a href="cart.html">Go to Cart (<span id="cartCount">0</span>)</a>
+</header>
+
+<section class="products">
+    <div class="product">
+        <h3>Vodka</h3>
+        <p>₹1500</p>
+        <button onclick="addToCart('Vodka',1500)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>Rum</h3>
+        <p>₹1200</p>
+        <button onclick="addToCart('Rum',1200)">Add to Cart</button>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

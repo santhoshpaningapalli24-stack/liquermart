@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Verification</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card-box">
+        <h2> 💳 Card Verification</h2>
+
+        <input type="text" id="cardNumber"
+               placeholder="Enter 16-digit Card Number"
+               maxlength="16">
+        <br><br>
+
+        <button id="verifyCardBtn">Verify & Enter</button>
+        <p id="cardError"></p>
+    </div>
+</div>
+
+<script>
+document.getElementById("verifyCardBtn").onclick = function () {
+    let card = document.getElementById("cardNumber").value;
+
+    if (!/^[0-9]{16}$/.test(card)) {
+        document.getElementById("cardError").innerText =
+            "Enter valid 16-digit card number";
+        return;
+    }
+
+    localStorage.setItem("cardVerified", "true");
+    window.location.href = "index.html";
+};
+</script>
+
+</body>
+</html>

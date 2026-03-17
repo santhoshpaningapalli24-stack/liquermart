@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<script>
+if(localStorage.getItem("cardVerified") !== "true"){
+    window.location.href = "card-verification.html";
+}
+</script>
+
+<h2>Checkout</h2>
+
+<form onsubmit="placeOrder(); return false;">
+    <input type="text" placeholder="Name" required><br><br>
+    <input type="text" placeholder="Address" required><br><br>
+    <button type="submit">Place Order</button>
+</form>
+
+<script src="js/script.js"></script>
+</body>
+</html>

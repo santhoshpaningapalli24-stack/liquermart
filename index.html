@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LiquorMart | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<script>
+if(localStorage.getItem("cardVerified") !== "true"){
+    window.location.href = "card-verification.html";
+}
+</script>
+
+<header>
+    <h1>🍷 LiquorMart</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+        <button onclick="logout()">Logout</button>
+    </nav>
+</header>
+
+<section class="products">
+    <div class="product">
+        <h3>Whisky</h3>
+        <p>₹2500</p>
+        <button onclick="addToCart('Whisky',2500)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>Wine</h3>
+        <p>₹1800</p>
+        <button onclick="addToCart('Wine',1800)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>Beer</h3>
+        <p>₹300</p>
+        <button onclick="addToCart('Beer',300)">Add to Cart</button>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
